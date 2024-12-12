@@ -1,220 +1,181 @@
-# AWS Solutions Architect Certification - Session 1 Notes
+# AWS Solutions Architect Certification - Session 1
 
-## Introduction
-
-Welcome to the first session of the AWS Solutions Architect Certification preparation course. In this session, we establish the foundation for understanding the AWS Cloud. We will cover fundamental concepts of cloud computing, introduce AWS’s global infrastructure, review key AWS service models, discuss the differences between traditional on-premises IT and cloud deployments, and delve into the basics of AWS pricing and cost management. The knowledge gained here forms the baseline for subsequent sessions and prepares you for the AWS Cloud Practitioner and Solutions Architect Associate exams.
+*(Note: The text is in English since the certification exam is in English. However, key cloud and AWS terms will include their Spanish equivalents in parentheses where it adds value, especially if you are familiar with Spanish IT/cloud terminology.)*
 
 ---
 
-## AWS Certifications Overview
+## Introduction to AWS Certifications
 
-### Certification Paths
+AWS certifications validate your cloud expertise, enabling you to highlight in-demand skills. They are categorized into four levels:
 
-AWS offers a comprehensive certification path aligned to various cloud roles. Among them, the ones closely related to architectural design are:
+1. **Foundational (Fundacional):**  
+   - **AWS Certified Cloud Practitioner:** Establishes fundamental AWS Cloud knowledge (conocimientos fundamentales de la nube AWS).
 
-1. **AWS Certified Cloud Practitioner (Foundational):**
-   - Broad overview of AWS Cloud essentials.
-   - Ideal starting point for beginners.
-   
-2. **AWS Certified Solutions Architect – Associate (Associate):**
-   - Focuses on designing cost-effective, fault-tolerant, scalable, and secure architectures.
-   - Includes approximately 65 questions (50 scored, 15 unscored).
+2. **Associate (Asociado):**  
+   - **AWS Certified Solutions Architect – Associate:** Core architectural best practices on AWS.
+   - **AWS Certified Developer – Associate:** Building and maintaining AWS-based applications.
+   - **AWS Certified SysOps Administrator – Associate:** Operating and managing AWS workloads.
 
-3. **AWS Certified Solutions Architect – Professional (Professional):**
-   - Deep architectural knowledge and advanced solution design.
-   - About 75 questions (60 scored, 15 unscored).
+3. **Professional (Profesional):**  
+   - **AWS Certified Solutions Architect – Professional:** Advanced skills for complex, large-scale AWS architectures.
+   - **AWS Certified DevOps Engineer – Professional:** Expert in CI/CD, automation, and operations in the cloud.
 
-These certifications build upon each other, though no exam is strictly a prerequisite for another. It is common to begin with Cloud Practitioner and then move on to the Solutions Architect Associate before attempting the Professional level.
+4. **Specialty (Especialidad):**  
+   - Certifications focus on areas like Security (Seguridad), Analytics (Analítica), Machine Learning (Aprendizaje Automático), Databases (Bases de Datos), Networking (Redes).
+
+For more details, visit the [AWS Certification Official Page](https://aws.amazon.com/certification/).
 
 ---
 
-## Cloud Computing Fundamentals
+## AWS Certification Paths
 
-### Traditional IT Model (On-Premises)
+Two common paths include:
 
-Before the cloud, organizations managed their own data centers. This required significant upfront capital expenditures (CAPEX) and complex maintenance:
+1. **Architectural Path:**
+   - Start with Cloud Practitioner (Fundacional) for core cloud knowledge.
+   - Move on to Solutions Architect – Associate (Asociado) to design well-architected systems.
+   - Progress to Solutions Architect – Professional (Profesional) for advanced architectures.
+   - Add a Security Specialty (Especialidad de Seguridad) for deeper expertise in secure architectures.
 
-- **Challenges of On-Premises Infrastructure:**
-  - Large upfront investment in servers, networking, storage, and physical facilities.
-  - Costs for power, cooling, space, and 24/7 on-site personnel.
-  - Hardware procurement, installation, and upgrades are time-consuming.
-  - Predicting capacity is difficult—overestimate and waste resources; underestimate and fail to meet demand.
-  - Scaling resources quickly to meet sudden demand spikes is limited.
-  - Disaster recovery (DR) strategies are complex and costly.
+2. **Application Architecture Path:**
+   - Begin with Cloud Practitioner (Fundacional).
+   - Advance to Developer Associate (Asociado) for application-centric AWS usage.
+   - Move to DevOps Engineer – Professional (Profesional) to master CI/CD, deployment, and operations.
+   - Consider Database or Machine Learning Specialty (Especialidad) certifications for domain-specific expertise.
 
-This model often hinders agility and innovation due to lengthy procurement cycles and high costs.
+See the [AWS Certification Paths PDF](https://d1.awsstatic.com/training-and-certification/docs/AWS_certification_paths.pdf) for more information.
 
-### Cloud Computing Model
+---
 
-Cloud computing revolutionizes IT by turning infrastructure into an on-demand resource. Instead of procuring and managing hardware, you access services over the internet as operating expenses (OPEX):
+## Session Agenda
 
-- **Key Advantages:**
-  - **Pay-as-You-Go:** Only pay for actual usage.
-  - **Rapid Elasticity:** Scale resources up or down within minutes.
-  - **No Heavy Upfront Costs:** Minimal capital expenditure.
-  - **Global Reach:** Deploy applications globally in minutes.
-  - **Focus on Business:** Let the provider handle hardware and infrastructure management.
+Today’s session covers:
 
-**Cloud Computing Definition:**
-Cloud Computing is the on-demand delivery of compute power, storage, databases, and other IT resources via the internet with pay-as-you-go pricing. It treats infrastructure more like software—flexible, scalable, and quick to provision—thus accelerating innovation.
+1. Cloud Computing Overview (Descripción general de la informática en la nube)
+2. Benefits of the Cloud (Beneficios de la nube)
+3. Cloud Service Models: IaaS (Infraestructura como servicio), PaaS (Plataforma como servicio), SaaS (Software como servicio)
+4. Cloud Deployment Models: Public (Nube pública), Private (Nube privada), Hybrid (Nube híbrida)
+5. Why Choose AWS? (¿Por qué AWS?)
+6. AWS Global Infrastructure (Infraestructura global de AWS)
+7. Setting Up an AWS Account (Creación de una cuenta AWS)
+8. AWS Pricing Calculator and Cost Explorer (Calculadora de precios y Explorador de costos)
+9. Budget Configuration (Configuración de presupuesto)
+
+---
+
+## Understanding Cloud Computing
+
+### Traditional IT Model (Modelo Informático Tradicional)
+
+On-premises (en las instalaciones) infrastructure involves high Capital Expenditures (CAPEX - Gastos de capital) for servers, networking, cooling, power, and security. Scaling is slow, upgrades are costly, and disaster recovery planning is complex.
+
+### What is Cloud Computing?
+
+Cloud computing provides on-demand delivery of compute (cómputo), storage (almacenamiento), databases (bases de datos), and other IT resources over the internet, paying only for what you use. It transforms infrastructure from a CAPEX model to an Operational Expense (OPEX - Gastos operativos) model, enhancing agility and cost efficiency.
 
 ### Five Essential Characteristics of Cloud Computing
 
-1. **On-Demand Self-Service:**  
-   Provision computing resources automatically without human intervention.
+1. **On-Demand Self-Service (Auto servicio bajo demanda):** Provision resources as needed without manual intervention.
+2. **Broad Network Access (Amplio acceso a la red):** Access services from anywhere, via various devices.
+3. **Resource Pooling (Agrupación de recursos):** Multi-tenant environment with secure isolation.
+4. **Rapid Elasticity (Elasticidad rápida):** Scale resources up or down quickly based on demand.
+5. **Measured Service (Servicio medido):** Pay only for your actual resource usage.
 
-2. **Broad Network Access:**  
-   Access services from anywhere, via multiple platforms (laptops, mobiles, tablets).
+---
 
-3. **Multi-Tenancy & Resource Pooling:**  
-   Shared infrastructure among multiple customers with security and isolation.
+## Benefits of Cloud Computing (Beneficios del Cloud Computing)
 
-4. **Rapid Elasticity:**  
-   Scale in or out quickly, seamlessly adjusting capacity based on demand.
-
-5. **Measured Service (Pay-as-You-Go):**  
-   Resource usage is monitored, measured, and billed accurately.
-
-### Key Benefits of the Cloud
-
-- **From CAPEX to OPEX:** Reduce total cost of ownership by removing the need for on-site data centers.
-- **Economies of Scale:** Providers like AWS leverage vast scale to lower costs for all customers.
-- **No More Guessing Capacity:** Scale on-demand—start small and grow as needed.
-- **Increase Speed and Agility:** Launch servers, databases, or other services in minutes.
-- **Global Reach and High Availability:** Deploy workloads across multiple geographic regions.
-- **Focus on Business Value:** Spend time innovating, not maintaining infrastructure.
+1. **From CAPEX to OPEX:** Lower upfront costs and pay as you go.
+2. **Economies of Scale:** AWS’s large scale reduces costs.
+3. **Stop Guessing Capacity:** Scale according to actual usage.
+4. **Speed & Agility:** Launch servers within minutes.
+5. **Global Reach (Alcance global):** Deploy worldwide instantly.
+6. **Focus on Business:** Let AWS handle data center maintenance.
 
 ---
 
 ## Cloud Service Models
 
-### Infrastructure as a Service (IaaS)
-
-- **Example:** Amazon EC2 (Elastic Compute Cloud)
-- **What it Offers:**
-  - Virtual servers (instances), storage, and networking.
-  - You manage the operating system and applications; AWS manages the underlying hardware.
-
-### Platform as a Service (PaaS)
-
-- **Example:** AWS Elastic Beanstalk
-- **What it Offers:**
-  - Run and scale applications without managing underlying infrastructure.
-  - Automated provisioning of compute capacity, load balancing, scaling, and health monitoring.
-  
-### Software as a Service (SaaS)
-
-- **Examples:** Salesforce, Google Workspace, Dropbox
-- **What it Offers:**
-  - Fully managed applications delivered over the internet.
-  - No need to maintain servers, patch systems, or handle upgrades.
+- **IaaS (Infraestructura como servicio):** e.g., Amazon EC2. You manage the OS and above; AWS manages the underlying hardware.
+- **PaaS (Plataforma como servicio):** e.g., AWS Elastic Beanstalk. AWS manages OS and runtime; you focus on your application code.
+- **SaaS (Software como servicio):** e.g., Salesforce, Dropbox. Fully managed software delivered over the internet.
 
 ---
 
 ## Cloud Deployment Models
 
-1. **Public Cloud:**
-   - Owned and operated by a third-party provider (e.g., AWS).
-   - Multi-tenant environment; pay only for what you use.
-   
-2. **Private Cloud:**
-   - Exclusively operated for a single organization.
-   - Greater control, but at the cost of managing infrastructure and maintenance.
-   
-3. **Hybrid Cloud:**
-   - Combination of public and private clouds.
-   - Balance flexibility, cost savings, and control.
-   
----
-
-## Why AWS?
-
-**Amazon Web Services (AWS)** is the world’s most broadly adopted cloud platform, with more than 200 fully featured services available. Key reasons to choose AWS:
-
-- **Global Leader:** Largest community of customers and partners.
-- **Low Cost:** Benefit from AWS’s economies of scale.
-- **Elastic and Agile:** Instantly scale resources as business needs evolve.
-- **Secure and Compliant:** Strong compliance frameworks, encryption, and isolation.
-- **Global Footprint:** Regions and Availability Zones around the world.
-
-**Pricing Model:**
-- **Compute:** Pay per hour or second of compute time.
-- **Storage:** Pay per GB/month stored.
-- **Data Transfer:** Inbound data transfer is typically free, outbound data transfer incurs charges.
+- **Public Cloud (Nube Pública):** Shared infrastructure, hosted by a provider like AWS.
+- **Private Cloud (Nube Privada):** Dedicated environment for a single organization.
+- **Hybrid Cloud (Nube Híbrida):** Mix of public and private, balancing control and flexibility.
 
 ---
 
-## AWS Global Infrastructure
+## Why Choose AWS? (¿Por qué AWS?)
 
-### Key Concepts
-
-1. **Regions:**  
-   Geographically isolated areas containing multiple Availability Zones (AZs).  
-   Each region is independent, providing full redundancy and connectivity to meet regional compliance and latency requirements.
-
-2. **Availability Zones (AZs):**  
-   Multiple, isolated data centers within a region.  
-   By deploying across AZs, you achieve high availability and fault tolerance.
-
-3. **Edge Locations (Points of Presence):**  
-   Global network of content delivery endpoints to serve content with low latency.
-   
-4. **Local Zones and Outposts:**  
-   Extend AWS infrastructure closer to end-users for ultra-low latency and compliance needs.
-
-**Choosing a Region:** Consider compliance, latency, available services, and cost.  
-**Using Multiple AZs:** Enhance availability by distributing workloads across AZs.  
-**Utilizing Edge Locations:** Improve content delivery performance with services like Amazon CloudFront.
+- **Comprehensive Services:** 200+ fully featured services.
+- **Cost-Efficiency:** Benefit from AWS’s scale.
+- **Elasticity & Agility (Elasticidad y agilidad):** Scale instantly.
+- **Global Infrastructure (Infraestructura global):** Regions, Availability Zones (Zonas de disponibilidad), and Edge Locations.
+- **Security (Seguridad):** Strong compliance frameworks.
+- **Openness & Flexibility:** Choose languages, frameworks, and architectures.
 
 ---
 
-## Setting Up an AWS Account
+## AWS Global Infrastructure (Infraestructura Global de AWS)
 
-1. **Sign Up at [AWS Free Tier](https://aws.amazon.com/free/):**  
-   Provide an email address, payment method, and contact details.
-   
-2. **Select Support Plan:**  
-   The Basic (Free) plan is sufficient for most initial use cases.
-   
-3. **Start Using the Free Tier:**  
-   Many services offer 12-month free tiers and certain permanent free allocations.
+- **Regions (Regiones):** Geographically isolated locations, each with multiple Availability Zones (Zonas de disponibilidad).
+- **Availability Zones (Zonas de disponibilidad):** Discrete data centers with redundant power and networking.
+- **Edge Locations (Puntos de presencia):** Improve content delivery latency using services like Amazon CloudFront.
 
-**Note:** Keep track of usage to avoid unexpected charges. The AWS Free Tier helps you explore AWS at minimal cost but always be aware of resource usage beyond free limits.
+**Considerations:**  
+Choose a region based on latency, compliance, and services needed. Deploy across multiple AZs for fault tolerance. Use Edge Locations to lower latency for end-users.
 
 ---
 
-## Cost Management Tools
+## Setting Up an AWS Account (Creación de una cuenta AWS)
 
-### AWS Cost Explorer
-
-- **Purpose:**  
-  Visualize, understand, and control your costs and usage over time.
-  
-- **Features:**  
-  - Create custom reports, filter by service, region, or tags.
-  - Daily, monthly, or hourly granularity.
-  - Forecast future costs based on historical usage.
-  
-### AWS Budgets
-
-- **Purpose:**  
-  Set custom budgets and receive alerts when costs or usage exceed thresholds.
-  
-- **Alert Types:**  
-  - Actual cost alerts: Triggered when you surpass a defined spending limit.
-  - Forecasted alerts: Triggered if you’re projected to exceed your budget.
-  
-- **Actions:**  
-  Optionally automate cost control measures when budgets exceed set limits (e.g., stopping EC2 instances).
-
-### Tags
-
-- **Purpose:**  
-  Attach metadata (key-value pairs) to AWS resources for organization, cost tracking, and access control.
-  
-- **Use Cases:**  
-  - Identify which department or project a resource belongs to.
-  - Filter Cost Explorer reports by tags to understand project-level spending.
+1. **Sign Up at AWS Free Tier:** Access services with free allowances.
+2. **Provide Billing Information:** Credit/debit card required.
+3. **Identity Verification:** Enter a phone number for confirmation.
+4. **Select Support Plan:** Basic (Básico) is free and sufficient for learning.
+5. **Get Started:** Launch your first services via the AWS Management Console.
 
 ---
 
+## AWS Pricing & Cost Management
+
+**Pricing Model:**  
+- Compute: Pay per CPU time.  
+- Storage: Pay per GB/month.  
+- Data Transfer: Inbound often free, outbound billed per GB.
+
+### AWS Pricing Calculator (Calculadora de Precios AWS)
+- Estimate monthly costs before deployment.
+
+### AWS Cost Explorer (Explorador de Costos)
+- Track and visualize costs over time.
+- Identify trends, filter by service, region, or tags.
+
+### AWS Budgets (Presupuestos de AWS)
+- Set spending or usage thresholds.
+- Receive alerts when approaching or exceeding budgets.
+- Forecast future usage and automate cost-control actions.
+
+### Tagging (Etiquetado)
+- Assign key-value pairs to resources.
+- Filter costs by tags to understand spending at project or department level.
+
+---
+
+## Summary
+
+**Key Takeaways:**
+- Cloud computing shifts from costly, inflexible on-premises infrastructures to scalable, pay-as-you-go models.
+- AWS certifications (Fundacional, Asociado, Profesional, Especialidad) guide your learning path.
+- AWS provides global infrastructure (Regiones, Zonas de disponibilidad) ensuring low latency and high availability.
+- Service models (IaaS, PaaS, SaaS) and deployment models (Nube Pública, Nube Privada, Nube Híbrida) address diverse needs.
+- Manage costs using tools like the AWS Pricing Calculator, Cost Explorer, and Budgets.
+
+With this foundational understanding, you are prepared to delve deeper into AWS services (like IAM, VPC, EC2, S3) and architectural best practices. This knowledge sets you on the path to achieving AWS Solutions Architect certifications and effectively designing cloud solutions.
+
+---
