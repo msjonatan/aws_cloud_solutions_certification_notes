@@ -176,6 +176,4 @@ Choose a region based on latency, compliance, and services needed. Deploy across
 - Service models (IaaS, PaaS, SaaS) and deployment models (Nube Pública, Nube Privada, Nube Híbrida) address diverse needs.
 - Manage costs using tools like the AWS Pricing Calculator, Cost Explorer, and Budgets.
 
-With this foundational understanding, you are prepared to delve deeper into AWS services (like IAM, VPC, EC2, S3) and architectural best practices. This knowledge sets you on the path to achieving AWS Solutions Architect certifications and effectively designing cloud solutions.
-
 ---
