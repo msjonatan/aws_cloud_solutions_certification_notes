@@ -156,3 +156,6 @@ Budgets and Cost Explorer work together to ensure proactive cost management.
 - AWS Cost Explorer, Budgets, and tagging help you manage and optimize costs effectively.
 
 ---
+
+| [« Back to README](README.md) | [Next: Session 2 »](session_2.md) |
+| --- | --- |
