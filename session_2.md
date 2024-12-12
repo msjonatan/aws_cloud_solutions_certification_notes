@@ -2,8 +2,6 @@
 
 *(Note: Text is in English, as the exam is in English. Key AWS/cloud terms are provided in Spanish (in parentheses) where helpful.)*
 
----
-
 ## Introduction
 
 Welcome to Session 2 of the AWS Solutions Architect course. In this session, we delve into identity, access, governance, and multi-account strategies. Understanding these concepts is critical for architecting secure, compliant, and scalable cloud environments. We will discuss the Shared Responsibility Model, how to access AWS, Identity and Access Management (IAM), AWS Support Plans, and multi-account strategies using AWS Organizations.
