@@ -1,3 +1,6 @@
+| [« Back to README](README.md) | [Open Class Presentation](session_1_slides.pdf) | [Next: Session 2 »](session_2.md) |
+| --- | --- | --- |
+
 # AWS Solutions Architect Certification – Session 1
 
 *(Note: Text is in English, as the exam is in English. Key AWS/cloud terms are provided in Spanish (in parentheses) where helpful.)*
@@ -157,5 +160,5 @@ Budgets and Cost Explorer work together to ensure proactive cost management.
 
 ---
 
-| [« Back to README](README.md) | [Next: Session 2 »](session_2.md) |
-| --- | --- |
+| [« Back to README](README.md) | [Open Class Presentation](session_1_slides.pdf) | [Next: Session 2 »](session_2.md) |
+| --- | --- | --- |
