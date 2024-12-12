@@ -1,3 +1,6 @@
+| [« Back to Session 1](session_1.md) | [Open Class Presentation](session_2_slides.pdf) | [Back to README](README.md) |
+| --- | --- | --- |
+
 # AWS Solutions Architect Certification – Session 2
 
 *(Note: Text is in English, as the exam is in English. Key AWS/cloud terms are provided in Spanish (in parentheses) where helpful.)*
@@ -160,5 +163,5 @@ Choose a support plan based on your operational needs:
 
 ---
 
-| [« Back to Session 1](session_1.md) | [Back to README](README.md) |
-| --- | --- |
+| [« Back to Session 1](session_1.md) | [Open Class Presentation](session_2_slides.pdf) | [Back to README](README.md) |
+| --- | --- | --- |
