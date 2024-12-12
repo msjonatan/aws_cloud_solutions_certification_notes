@@ -1,141 +1,158 @@
-# AWS Solutions Architect Certification - Session 1
+# AWS Solutions Architect Certification – Session 1
 
-*Note: The following essay is in English. Official AWS certification names and certain cloud terminology are provided in parentheses with their Spanish official or widely-used translations when it adds value for Spanish-speaking learners. This approach helps readers who are familiar with Spanish IT/cloud terms to better understand concepts without losing the English context.*
-
----
+*(Note: Text is in English, as the exam is in English. Key AWS/cloud terms are provided in Spanish (in parentheses) where helpful.)*
 
 ## Introduction
 
-Welcome to the first session of the AWS Solutions Architect training course. Today, we will begin with a broad overview of cloud computing and fundamental AWS concepts. This session sets the stage for your journey towards AWS certifications, focusing on the foundational knowledge you will need to progress through the AWS Certified Cloud Practitioner (*AWS Certificado Cloud Practitioner (Fundamentos)*), AWS Certified Solutions Architect – Associate (*AWS Certificado Arquitecto de Soluciones – Asociado*), and eventually the AWS Certified Solutions Architect – Professional (*AWS Certificado Arquitecto de Soluciones – Profesional*).
+Welcome to Session 1 of the AWS Solutions Architect course. In this session, we establish foundational knowledge of the AWS Cloud, its certifications, and essential cloud computing concepts. We will examine the different categories of AWS certifications, fundamental benefits of cloud computing, various service and deployment models, and why AWS is the leading provider. Additionally, we will explore the global infrastructure of AWS, how to create and manage an AWS account, and introduce basic cost management tools. This session provides the groundwork upon which all future sessions will build.
 
-We have a structured learning environment, including a WhatsApp group and a Google Classroom, where you will register attendance and provide feedback (retroalimentación) after each session. The sessions are recorded and made available the following day, so you can review them at your convenience.
+## Topics Covered
 
-Your instructor, José, is an experienced IT professional (profesional de TI) with a background in data engineering, big data (datos masivos), analytics (análisis) and visualization, pipelines, and multiple cloud certifications (certificaciones en la nube). Throughout this course, participants were asked to introduce themselves, share their experience with AWS and other clouds, their roles, hobbies, and what they hope to gain from the course. This collaborative approach ensures we understand the group’s background and goals, making the learning experience more effective.
+- AWS Certifications Overview (Descripción General de Certificaciones AWS)
+- Cloud Computing Fundamentals (Fundamentos de la Informática en la Nube)
+- Cloud Service Models: IaaS, PaaS, SaaS
+- Cloud Deployment Models: Public, Private, Hybrid
+- Why AWS? (¿Por qué AWS?)
+- AWS Global Infrastructure (Infraestructura Global de AWS)
+- Setting Up an AWS Account (Creación de una Cuenta AWS)
+- AWS Pricing Calculator, Cost Explorer, and Tagging
+- Budget Configuration (Configuración de Presupuesto)
 
 ---
 
-## The AWS Certification Landscape
+## AWS Certifications Overview (Descripción General de Certificaciones AWS)
 
-AWS certifications are categorized by difficulty and specialization:
+AWS certifications validate cloud skills and are divided into four categories:
 
 1. **Foundational (Fundacional)**:
-   - **AWS Certified Cloud Practitioner (AWS Certificado Cloud Practitioner (Fundamentos))**:  
-     A starting point for learners new to the AWS Cloud, covering basic terminology, global infrastructure, pricing, and fundamental services.
+   - **AWS Certified Cloud Practitioner (AWS Certificado Cloud Practitioner)**:  
+     Basic cloud knowledge, no experience required.
 
 2. **Associate (Asociado)**:
-   - **AWS Certified Solutions Architect – Associate (AWS Certificado Arquitecto de Soluciones – Asociado)**:  
-     Validates the ability to design secure, cost-optimized, and highly available architectures on AWS.
-   - **AWS Certified Developer – Associate (AWS Certificado Desarrollador – Asociado)**:  
-     Focuses on development and maintenance of applications on AWS.
-   - **AWS Certified SysOps Administrator – Associate (AWS Certificado Administrador SysOps – Asociado)**:  
-     Concentrates on managing and operating AWS workloads.
+   - **AWS Certified Solutions Architect – Associate (Arquitecto de Soluciones – Asociado)**  
+   - **AWS Certified Developer – Associate (Desarrollador – Asociado)**  
+   - **AWS Certified SysOps Administrator – Associate (Administrador SysOps – Asociado)**
 
 3. **Professional (Profesional)**:
-   - **AWS Certified Solutions Architect – Professional (AWS Certificado Arquitecto de Soluciones – Profesional)**:
-     Validates advanced technical skills and experience in designing distributed systems and complex architectures on AWS.
-   - **AWS Certified DevOps Engineer – Professional (AWS Certificado Ingeniero DevOps – Profesional)**:
-     Emphasizes continuous integration/continuous delivery (CI/CD), infrastructure as code (infraestructura como código), and efficient operations at scale.
+   - **AWS Certified Solutions Architect – Professional (Arquitecto de Soluciones – Profesional)**  
+   - **AWS Certified DevOps Engineer – Professional (Ingeniero DevOps – Profesional)**
 
 4. **Specialty (Especialidad)**:
-   - Examples include Security, Networking, Databases, Analytics, and Machine Learning.
-   - For instance, **AWS Certified Security – Specialty (AWS Certificado en Seguridad – Especialidad)**.
-   
-No prior certification is strictly required before moving to a more advanced level. However, foundational and associate-level certifications build essential skills and context, making advanced certifications more approachable.
+   - Focused on areas like Security, Networking, Databases, Analytics, or Machine Learning.
 
-**Certification Maintenance:**  
-Certifications are valid for three years. Achieving a higher-level certification (for example, obtaining the Professional level after the Associate) automatically renews the lower-level ones. Exam questions typically involve scenario-based problem-solving, not just theoretical knowledge, so gaining hands-on practice and using practice tests is crucial.
+No certification is a strict prerequisite for another, but it’s common to start with the Cloud Practitioner and then move to Associate and Professional levels. Certifications expire after 3 years, and obtaining a higher-level certification renews the lower-level ones. Practice exams and scenario-based learning are essential for success.
 
 ---
 
-## Cloud Computing Fundamentals
+## Cloud Computing Fundamentals (Fundamentos de la Informática en la Nube)
 
-### From Traditional IT to the Cloud
+Traditional IT infrastructures (infraestructura de TI tradicional) rely on owning data centers, hardware procurement, and complex maintenance. Cloud computing (informática en la nube) changes this paradigm, offering:
 
-In a traditional IT environment (entorno de TI tradicional), organizations maintain their own data centers (centros de datos), incurring large capital expenses (CAPEX) for servers, storage, networking, physical security, and staff. Upgrades and scaling require extensive planning and provisioning times, and disaster recovery (recuperación ante desastres) can be expensive and complex.
+- **On-Demand Self-Service (Autoservicio Bajo Demanda):** Access resources anytime without manual intervention.
+- **Broad Network Access (Amplio Acceso a la Red):** Use multiple platforms and devices via the internet.
+- **Resource Pooling (Agrupación de Recursos):** Providers serve multiple customers from shared infrastructure.
+- **Rapid Elasticity (Elasticidad Rápida):** Scale resources up or down instantly.
+- **Measured Service (Servicio Medido):** Pay only for what you use (pago por uso).
 
-**Cloud computing (informática en la nube)** shifts this model to on-demand, pay-as-you-go (pago por uso) operational expenses (OPEX). Instead of guessing capacity and paying upfront, you scale elastically as needed. AWS handles the undifferentiated heavy lifting of data center operations, freeing you to focus on adding business value.
-
-### Characteristics and Benefits
-
-**Key Characteristics:**
-- On-Demand Self-Service (autoservicio bajo demanda)
-- Broad Network Access (acceso a la red amplio)
-- Resource Pooling (agrupación de recursos)
-- Rapid Elasticity (elasticidad rápida)
-- Measured Service (servicio medido)
-
-**Key Benefits:**
-- Convert CAPEX to OPEX.
-- Benefit from economies of scale.
-- Scale on demand, no need to overprovision.
-- Increase speed, deploy resources in minutes.
-- Reduce costs by removing the overhead of maintaining data centers.
-- Achieve global reach easily by deploying applications in multiple AWS Regions (Regiones).
+**Benefits:**
+- Convert CAPEX to OPEX, reducing upfront costs.
+- Achieve economies of scale and lower per-unit costs.
+- Stop guessing capacity; scale on demand.
+- Increase speed and agility; provision in minutes.
+- Focus on innovation rather than infrastructure maintenance.
+- Gain global reach with minimal effort.
 
 ---
 
-## Cloud Service Models and Deployment Models
+## Cloud Service Models
 
-**Service Models:**
-- **Infrastructure as a Service (IaaS)**: Example – Amazon EC2  
-  You manage OS and applications; AWS manages the underlying hardware.
-- **Platform as a Service (PaaS)**: Example – AWS Elastic Beanstalk  
-  Focus on code; AWS handles infrastructure provisioning and management.
-- **Software as a Service (SaaS)**: Example – Salesforce  
-  Fully managed application accessible over the internet.
+- **Infrastructure as a Service (IaaS):**  
+  Example: Amazon EC2 (Máquinas Virtuales).  
+  You manage OS, applications, and data; AWS manages underlying hardware.
 
-**Deployment Models:**
-- **Public Cloud (Nube Pública)**: Shared infrastructure, hosted by providers like AWS.
-- **Private Cloud (Nube Privada)**: Dedicated infrastructure for a single organization.
-- **Hybrid Cloud (Nube Híbrida)**: Combination of public and private for greater flexibility.
+- **Platform as a Service (PaaS):**  
+  Example: AWS Elastic Beanstalk.  
+  Deploy code without managing the underlying infrastructure.
 
----
-
-## Why AWS?
-
-AWS leads the cloud market with a global footprint of Regions and Availability Zones (Zonas de Disponibilidad), offering unmatched breadth and depth of services. Customers choose AWS for:
-
-- **Cost Efficiency:** Pay only for what you use.
-- **Elasticity & Agility:** Scale quickly as demand changes.
-- **Global Infrastructure (Infraestructura Global):** Lower latency, better fault tolerance, regional compliance.
-- **Security & Compliance:** Broad security features, certifications, and encryption.
+- **Software as a Service (SaaS):**  
+  Example: Salesforce.  
+  Fully managed applications you consume over the internet.
 
 ---
 
-## AWS Global Infrastructure
+## Cloud Deployment Models
 
-AWS Regions are geographically separate areas, each containing multiple Availability Zones. Distributing applications across multiple AZs enhances high availability (alta disponibilidad) and fault tolerance (tolerancia a fallos). Edge locations (puntos de presencia) improve latency for content delivery.
-
-When choosing a Region, consider compliance requirements, service availability, cost differences, and latency.
-
----
-
-## Getting Started: AWS Account and Free Tier
-
-**Creating an AWS Account:**
-1. Visit the [AWS Free Tier](https://aws.amazon.com/free/) page.
-2. Provide an email, password, and billing details.
-3. Verify identity with a phone number.
-4. Select a support plan; basic (básico) support is free.
-5. Access the console and start exploring AWS services.
-
-The AWS Free Tier offers limited free usage of popular services for 12 months, making it easier to practice and avoid unexpected costs. Always monitor usage to stay within free limits.
+- **Public Cloud (Nube Pública):** AWS manages infrastructure shared among customers.
+- **Private Cloud (Nube Privada):** Dedicated environment for one organization.
+- **Hybrid Cloud (Nube Híbrida):** Combine on-premises (en las instalaciones) or private infrastructure with public cloud resources for flexibility.
 
 ---
 
-## Cost Management: AWS Pricing, Cost Explorer, and Budgets
+## Why AWS? (¿Por qué AWS?)
 
-**AWS Pricing Model:**
-- Compute, storage, and data transfer costs vary by usage.
-- Inbound data transfer is usually free; outbound data costs apply.
+AWS is the world’s most comprehensive and broadly adopted cloud platform:
 
-**Tools:**
-- **AWS Pricing Calculator:** Estimate costs before deployment.
-- **AWS Cost Explorer:** Visualize spending over time, identify trends, and drill down by service, region, or tag.
-- **AWS Budgets (Presupuestos de AWS):**  
-  Set spending limits, receive alerts when you approach or exceed thresholds, and even automate actions if overspending is forecasted.
+- **Cost Efficiency:** Pay only for what you consume.
+- **Elasticity & Agility:** Rapidly scale resources.
+- **Global Infrastructure:** Regions (Regiones), Availability Zones (Zonas de Disponibilidad), and Edge Locations (Puntos de Presencia) for low latency and compliance.
+- **Security & Compliance:** Built-in controls, encryption, and strong compliance frameworks.
+- **Innovation & Breadth of Services:** Over 200 fully featured services.
 
-**Tagging Resources (Etiquetado de Recursos):**
-Tags help organize resources by project, department, or environment (entorno). They also simplify cost allocation in Cost Explorer.
+---
+
+## AWS Global Infrastructure (Infraestructura Global de AWS)
+
+- **Regions (Regiones):** Geographically isolated areas; choose based on compliance, latency, and services.
+- **Availability Zones (Zonas de Disponibilidad):** Physically separate data centers for high availability and fault tolerance.
+- **Edge Locations (Puntos de Presencia):** Improve latency and content delivery via AWS CloudFront.
+
+By leveraging Regions and AZs, you can design globally distributed, highly available architectures.
+
+---
+
+## Setting Up an AWS Account (Creación de una Cuenta AWS)
+
+1. **Sign Up at AWS Free Tier:** [AWS Free Tier](https://aws.amazon.com/free/)  
+   Enter email, password, and billing details.
+2. **Identity Verification:** Provide phone number.
+3. **Support Plan (Plan de Soporte):** Basic (Básico) is free.
+4. **Start Exploring:** The free tier offers limited usage of popular services for up to 12 months.
+
+Regularly monitor your usage to avoid unexpected charges.
+
+---
+
+## AWS Pricing Calculator, Cost Explorer, and Tagging
+
+- **AWS Pricing Calculator:** Estimate costs before deploying workloads.
+- **AWS Cost Explorer (Explorador de Costos):** Analyze and visualize spending over time. Filter by service, region, or tags.
+- **Tags (Etiquetas):** Key-value pairs to organize resources (e.g., by project, department). Helps with cost allocation and simplifies searching.
+- **AWS Budgets (Presupuestos):**  
+  Set custom budgets and receive alerts if costs or usage exceed thresholds. Predictive alerts help prevent overspending.
+
+---
+
+## Budget Configuration (Configuración de Presupuesto)
+
+Creating a budget helps maintain financial control:
+
+1. Go to the Budgets Dashboard and create a new budget.
+2. Define cost thresholds (umbral de costo).
+3. Set alerts for actual or forecasted overspending.
+4. Use automated actions to prevent resource sprawl.
+
+Budgets and Cost Explorer work together to ensure proactive cost management.
+
+---
+
+## Summary
+
+**Key Takeaways:**
+- AWS certifications guide your learning path, from foundational to professional and specialty levels.
+- Cloud computing replaces upfront investments with on-demand resources, improving speed, agility, and global reach.
+- Service models (IaaS, PaaS, SaaS) and deployment models (Public, Private, Hybrid) meet diverse architectural needs.
+- AWS leads with broad services, robust security, and global infrastructure.
+- Setting up an AWS account and using the AWS Free Tier enables hands-on practice.
+- AWS Cost Explorer, Budgets, and tagging help you manage and optimize costs effectively.
 
 ---
